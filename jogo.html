@@ -5,15 +5,16 @@
 
 		<title>Estourando balões</title>
 		<script src="jogo.js"></script>
+		<link rel="stylesheet" href="estilo.css">
 
 	</head>
 
 	<body onload="iniciaJogo()">
-		<div style="float: left; width: auto; height: 500px; background:#fff; border: solid 1px #a2a2a2; margin-right: 5px;">
+		<div class="pontuacao">
 			<table>
 				<tr>
 					<td><img src="imagens/balao_azul_grande.png"></td>
-					<td style="text-align: center; color: red; font-size: 30px;">
+					<td class="pontuacao_baloes">
 						<span id="baloes_inteiros"></span>
 					</td>
 				</tr>
@@ -21,20 +22,20 @@
 			<table>
 				<tr>
 					<td><img src="imagens/balao_azul_grande_estourado.png"></td>
-					<td style="text-align: center; color: red; font-size: 30px;">
+					<td class="pontuacao_baloes">
 						<span id="baloes_estourados"></span>
 					</td>
 				</tr>
 			</table>
-			<table style="width: 140px; height: 132px;">
+			<table class="cronometro">
 				<tr>
-					<td style="background: url('imagens/cronometro.png'); text-align: center; color: red; font-size: 25px;">
+					<td>
 						<span id="cronometro"></span>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<div id="cenario" style="float: left; width: 600px; height: 500px; background: url('imagens/cenario.png'); background-position: bottom;">
+		<div class="cenario" id="cenario">
 
 		</div>
 	</body>

@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 
 		<title>Estourando balões</title>
+		<link rel="stylesheet" href="estilo.css">
 
 		<script language='Javascript'>
 			
@@ -16,8 +17,12 @@
 	</head>
 
 	<body>
-		<div>
-			<b>Nivel: </b>
+		<div class="bg-body"></div>
+		<div class="centralizado bg-titulo">
+			<h1>Estourando Balões</h1>
+		</div>
+		<div class="centralizado">
+			<h2>Escolha o nível: </h2>
 			<select name="nivel" id="nivel_jogo">
 				<option value="1">Fácil</option>
 				<option value="2">Normal</option>
@@ -25,8 +30,8 @@
 			</select>
 		</div>
 		<br>
-		<div>
-			<img src="imagens/iniciar.png" alt="Botão Iniciar" onclick="iniciaJogo()">
+		<div class="centralizado">
+			<img src="imagens/iniciar.png" alt="Botão Iniciar" title="Iniciar" onclick="iniciaJogo()">
 		</div>
 	</body>
 	

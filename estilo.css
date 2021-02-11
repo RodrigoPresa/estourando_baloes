@@ -1,0 +1,84 @@
+/* --- TELA INICIAL --- */
+html {
+    min-height: 100%;
+    height: 100%;
+}
+body {
+    color: #fff ;
+    margin: 0;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.bg-body {
+    background-size: contain;
+    background: url('imagens/bg-body.jpg');
+    opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-titulo {
+    background: url('imagens/background-titulo.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 200px;
+}
+
+h1 {
+    font-family: 'Optima', sans-serif;
+    font-size: 3.5em;    
+    padding-bottom: 60px;
+    
+}
+
+.centralizado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- TELA JOGO --- */
+
+.pontuacao  {
+    float: left;
+    width: auto;
+    height: 500px;
+    background: #fff;
+    border: solid 1px #a2a2a2;
+    margin-right: 5px;
+}
+
+.cenario {
+    float: left;
+    width: 600px;
+    height: 500px;
+    background: url('imagens/cenario.png');
+    background-position: bottom;
+}
+
+.pontuacao_baloes {
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+.cronometro {
+    width: 140px;
+    height: 132px;
+}
+
+.cronometro td {
+    background: url('imagens/cronometro.png');
+    text-align: center;
+    color: red;
+    font-size: 25px;
+}
