@@ -1,4 +1,4 @@
-/* --- TELA INICIAL --- */
+
 html {
     min-height: 100%;
     height: 100%;
@@ -9,6 +9,16 @@ body {
     height: 100%;
     position: relative;
     z-index: 5;
+}
+
+h1 {
+    font-family: 'Optima', sans-serif;
+    font-size: 3.5em;    
+    padding-bottom: 60px;    
+}
+
+h2 {
+    padding-right: 5px;
 }
 
 .bg-body {
@@ -25,6 +35,8 @@ body {
     height: 100%;
 }
 
+/* --- TELA INICIAL --- */
+
 .bg-titulo {
     background: url('imagens/background-titulo.png');
     background-position: bottom;
@@ -33,28 +45,38 @@ body {
     padding: 200px;
 }
 
-h1 {
-    font-family: 'Optima', sans-serif;
-    font-size: 3.5em;    
-    padding-bottom: 60px;
-    
-}
-
 .centralizado{
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 /* --- TELA JOGO --- */
+
+.bg-titulo-pequeno {
+    background: url('imagens/background-titulo.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    text-align: center;
+}
+
+.container h3 {
+    padding-bottom: 20px;
+}
 
 .pontuacao  {
     float: left;
     width: auto;
     height: 500px;
     background: #fff;
-    border: solid 1px #a2a2a2;
+    border: solid 2px #222020;
+    border-radius: 3px;
     margin-right: 5px;
+}
+
+.baloes {
+    padding: 20px;
 }
 
 .cenario {
@@ -62,7 +84,11 @@ h1 {
     width: 600px;
     height: 500px;
     background: url('imagens/cenario.png');
+    background-color: #fff;
     background-position: bottom;
+    border: solid 2px #222020;
+    border-radius: 3px;
+    margin-bottom: 10px;
 }
 
 .pontuacao_baloes {
@@ -81,4 +107,12 @@ h1 {
     text-align: center;
     color: red;
     font-size: 25px;
+}
+
+.info {
+    clear: both;
+    border: solid 2px #222020;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #222020;
 }

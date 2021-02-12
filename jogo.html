@@ -1,25 +1,29 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
 
-		<title>Estourando balões</title>
-		<script src="jogo.js"></script>
-		<link rel="stylesheet" href="estilo.css">
+<head>
+	<meta charset="UTF-8">
 
-	</head>
+	<title>Estourando balões</title>
+	<script src="jogo.js"></script>
+	<link rel="stylesheet" href="estilo.css">
+	
+</head>
 
-	<body onload="iniciaJogo()">
+<body onload="iniciaJogo()" class="centralizado">
+	<div class="bg-body"></div>
+	<div class="container">
+		<div class="bg-titulo-pequeno">
+			<h3>Estourando Balões</h3>
+		</div>
 		<div class="pontuacao">
-			<table>
+			<table class="baloes">
 				<tr>
 					<td><img src="imagens/balao_azul_grande.png"></td>
 					<td class="pontuacao_baloes">
 						<span id="baloes_inteiros"></span>
 					</td>
 				</tr>
-			</table>
-			<table>
 				<tr>
 					<td><img src="imagens/balao_azul_grande_estourado.png"></td>
 					<td class="pontuacao_baloes">
@@ -35,9 +39,12 @@
 				</tr>
 			</table>
 		</div>
-		<div class="cenario" id="cenario">
-
+		<div class="cenario" id="cenario"></div>
+		<div class="info">
+			<h4>Pontuação</h4>
 		</div>
-	</body>
+	</div>
 	
+</body>
+
 </html>

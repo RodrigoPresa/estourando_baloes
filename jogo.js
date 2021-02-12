@@ -6,7 +6,7 @@ function iniciaJogo() {
     var tempo_segundos = 0;
 
     if(nivel_jogo == 1){//facil = 120 segundos
-        tempo_segundos = 120;
+        tempo_segundos = 90;
     }
     if(nivel_jogo == 2){//normal = 60 segundos
         tempo_segundos = 60;
@@ -84,7 +84,8 @@ function pontuacao(acao){
 
 function situacao_jogo(baloes_inteiros){
     if(baloes_inteiros == 0){
-        alert('Parabéns! Você conseguiu estourar todos os balões a tempo!');
+        //alert('Parabéns! Você conseguiu estourar todos os balões a tempo!');
+        
         parar_jogo();
     }
 }
