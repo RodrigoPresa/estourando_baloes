@@ -31,4 +31,12 @@ Já na tela jogo, são apresentadas as seguintes funcionalidades:
 
 Caso o jogador consiga estourar todos os balões a tempo, a função situacao_jogo(baloes_inteiros) é chamada. Esta função determina que quando a quantidade de balões inteiros for igual a 0, o cronômetro para e um alert é apresentado informando o fim do jogo.
 
+<hr>
+
+<h1 align="center"> Novas implementações </h1>
+
+### Aqui serão listadas as modificações realizadas após o término do projeto proposto:
+- Criado o arquivo estilo.css para centralizar toda a estilização em um só lugar;
+- Nova interface da tela inicial (index.html);
+
 :warning: Projeto ainda em desenvolvimento. Ainda serão implementadas novas funcionalidades, além das apresentadas no curso.
