@@ -3,14 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-
-	<title>Estourando balões</title>
-	<script src="jogo.js"></script>
-	<link rel="stylesheet" href="estilo.css">
-	
+	<title>Estourando balões</title>	
+	<link rel="stylesheet" href="estilo.css">	
 </head>
 
-<body onload="iniciaJogo()" class="centralizado">
+<body onload="iniciaJogo()" class="centralizado">	
 	<div class="bg-body"></div>
 	<div class="container">
 		<div class="bg-titulo-pequeno">
@@ -44,6 +41,17 @@
 			<h4>Pontuação</h4>
 		</div>
 	</div>
+	<div class="modal-background display-none">
+        <div class="modal">
+            <div class="mensagem"></div>
+			<div>
+				<button id="menu-inicial">Voltar para o menu principal</button>
+				<button id="recomeco-nivel">Recomeçar</button>
+			</div>
+			
+        </div>
+    </div>
+	<script src="jogo.js"></script>
 	
 </body>
 

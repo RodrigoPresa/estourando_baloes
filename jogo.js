@@ -18,12 +18,12 @@ function iniciaJogo() {
     //inserindo segundos no elemento
     document.getElementById('cronometro').innerHTML = tempo_segundos;
 
-    var qtde_baloes = 50;
+    var qtde_baloes = 70;
 
     cria_baloes(qtde_baloes);
 
     document.getElementById('baloes_inteiros').innerHTML = qtde_baloes;
-    document.getElementById('baloes_estourados').innerHTML = 0;
+    document.getElementById('baloes_estourados').innerHTML = 0;    
 
     contagem_tempo(tempo_segundos + 1);
 }
@@ -41,10 +41,11 @@ function contagem_tempo(segundos){
 
 function game_over(){
     remove_eventos_baloes();
-    alert('Fim de jogo! Você não conseguiu estourar os balões a tempo!');
+    mostraModal("boooooooo");
 }
 
 function cria_baloes(qtde_baloes){
+    document.getElementById('cenario').innerHTML = "";
     for (var i = 1; i <= qtde_baloes; i++){
         var balao = document.createElement('img');
         balao.src = 'imagens/balao_azul_pequeno.png';
@@ -84,8 +85,7 @@ function pontuacao(acao){
 
 function situacao_jogo(baloes_inteiros){
     if(baloes_inteiros == 0){
-        //alert('Parabéns! Você conseguiu estourar todos os balões a tempo!');
-        
+        mostraModal("Parabains");
         parar_jogo();
     }
 }
@@ -103,3 +103,24 @@ function remove_eventos_baloes(){
         i++;
     }
 }
+
+function mostraModal(modalText) {
+    document.querySelector('.mensagem').innerText = modalText;
+    var modal = document.querySelector('.modal-background');
+    modal.classList.remove('display-none');
+}
+
+
+function recomecoNivel() {
+
+}
+
+// LISTENERS
+document.getElementById("menu-inicial").addEventListener("click", function() {
+    window.location.href = 'index.html';
+});
+
+document.getElementById("recomeco-nivel").addEventListener("click", function() { 
+    document.querySelector('.modal-background').classList.add('display-none');  
+    iniciaJogo();
+});

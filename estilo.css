@@ -116,3 +116,42 @@ h2 {
     background-color: #fff;
     color: #222020;
 }
+
+/* --- MODAL --- */
+
+.modal-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+}
+
+.display-none {
+    display: none;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    color: #222020;
+    position: absolute;
+    left: calc(50% - 216px);
+    top: calc(50% - 51.5px);
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    animation: modal .3s;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+        transform: translate(0, -60px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
