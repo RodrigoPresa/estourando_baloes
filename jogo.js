@@ -1,20 +1,23 @@
 var timerId = null;
 
-function iniciaJogo() {
-    var url = window.location.search;
-    var nivel_jogo = url.replace("?","");
-    var tempo_segundos = 0;
+var url = window.location.search;
+var nivel_jogo = url.replace("?","");
+var tempo_segundos = 0;
 
-    if(nivel_jogo == 1){//facil = 120 segundos
-        tempo_segundos = 90;
-    }
-    if(nivel_jogo == 2){//normal = 60 segundos
-        tempo_segundos = 60;
-    }
-    if(nivel_jogo == 3){//dificil = 30 segundos
-        tempo_segundos = 30;
-    }
-    
+if(nivel_jogo == 1){//facil = 60 segundos
+    tempo_segundos = 60;
+}
+if(nivel_jogo == 2){//normal = 45 segundos
+    tempo_segundos = 45;
+}
+if(nivel_jogo == 3){//dificil = 30 segundos
+    tempo_segundos = 30;
+}
+
+function iniciaJogo() {
+    //zerando a pontuação
+    document.getElementById('pontos').textContent = 0;  
+
     //inserindo segundos no elemento
     document.getElementById('cronometro').innerHTML = tempo_segundos;
 
@@ -41,11 +44,11 @@ function contagem_tempo(segundos){
 
 function game_over(){
     remove_eventos_baloes();
-    mostraModal("boooooooo");
+    mostraModal("Você não conseguiu estourar os balões a tempo!");
 }
 
 function cria_baloes(qtde_baloes){
-    document.getElementById('cenario').innerHTML = "";
+    document.getElementById('cenario').innerHTML = ""; //limpa a div cenário para a inserção dos balões
     for (var i = 1; i <= qtde_baloes; i++){
         var balao = document.createElement('img');
         balao.src = 'imagens/balao_azul_pequeno.png';
@@ -65,6 +68,7 @@ function estourar(e){
     document.getElementById(balaoId).src = 'imagens/balao_azul_pequeno_estourado.png';
 
     pontuacao(-1);
+    pontos(10);
 }
 
 function pontuacao(acao){
@@ -83,9 +87,19 @@ function pontuacao(acao){
     situacao_jogo(baloes_inteiros);
 }
 
+function pontos(pts){
+    var pontos_tela = parseInt(document.getElementById('pontos').textContent);
+    pontos_tela = pontos_tela + pts;
+    document.getElementById('pontos').innerHTML = pontos_tela;
+}
+
 function situacao_jogo(baloes_inteiros){
-    if(baloes_inteiros == 0){
-        mostraModal("Parabains");
+    if(baloes_inteiros == 0 && nivel_jogo != 3){
+        mostraModal("Parabéns! Você acha que está pronto para o próximo nível?");
+        parar_jogo();
+    }
+    else if(baloes_inteiros == 0 && nivel_jogo == 3){
+        mostraModal("Você é uma lenda! Parabéns!");
         parar_jogo();
     }
 }
@@ -111,16 +125,13 @@ function mostraModal(modalText) {
 }
 
 
-function recomecoNivel() {
-
-}
-
 // LISTENERS
 document.getElementById("menu-inicial").addEventListener("click", function() {
     window.location.href = 'index.html';
 });
 
 document.getElementById("recomeco-nivel").addEventListener("click", function() { 
-    document.querySelector('.modal-background').classList.add('display-none');  
+    document.querySelector('.modal-background').classList.add('display-none');
     iniciaJogo();
 });
+

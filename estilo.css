@@ -135,14 +135,37 @@ h2 {
 
 .modal {
     background-color: #fff;
+    border: 2px solid #222020;
     border-radius: 0.5rem;
     color: #222020;
     position: absolute;
     left: calc(50% - 216px);
     top: calc(50% - 51.5px);
-    padding: 1rem 1.5rem;
+    padding: 20px;
     width: 24rem;
     animation: modal .3s;
+    text-align: center;
+}
+
+.mensagem{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-menu{
+    background-color: #0f34da;
+    border-color: #0e11e9;
+    border-radius: 7px;
+    color: #fff; 
+    padding: 5px;
+}
+
+.btn-recomeco{
+    background-color: #6ed213;
+    border-color: #e5ffdc;
+    border-radius: 7px;
+    color: #fff;
+    padding: 5px;
 }
 
 @keyframes modal {

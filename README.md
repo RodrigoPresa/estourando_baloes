@@ -38,6 +38,5 @@ Caso o jogador consiga estourar todos os balões a tempo, a função situacao_jo
 ### Aqui serão listadas as modificações realizadas após o término do projeto proposto:
 - Criado o arquivo estilo.css para centralizar toda a estilização em um só lugar;
 - Nova interface da tela inicial (index.html) e tela de jogo (jogo.html);
-- Implementado sistema de modal ao final do jogo, apresentando uma mensagem personalizada e botões para voltar ao menu inicial ou reiniciar o nível.
-
-:warning: Projeto ainda em desenvolvimento. Ainda serão implementadas novas funcionalidades, além das apresentadas no curso.
+- Implementado sistema de modal ao final do jogo, apresentando uma mensagem personalizada e botões para voltar ao menu inicial ou reiniciar o nível;
+- Criado sistema de pontuação.
